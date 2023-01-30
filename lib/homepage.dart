@@ -14,7 +14,7 @@ class HomepageState extends State<Homepage> {
   late WebViewController _controller;
 
   final Completer<WebViewController> _controllerCompleter =
-  Completer<WebViewController>();
+      Completer<WebViewController>();
 
   @override
   void initState() {
@@ -31,7 +31,8 @@ class HomepageState extends State<Homepage> {
         child: WillPopScope(
           onWillPop: () => _goBack(context),
           child: WebView(
-            initialUrl: 'https://order.tabin.co.nz/restaurant/c342b393-4ce5-450f-a6fd-2e83b0cb6dce',
+            initialUrl:
+                'https://order.tabin.co.nz/restaurant/c342b393-4ce5-450f-a6fd-2e83b0cb6dce/',
             javascriptMode: JavascriptMode.unrestricted,
             onWebViewCreated: (WebViewController webViewController) {
               _controllerCompleter.future.then((value) => _controller = value);
